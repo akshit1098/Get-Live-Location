@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhereWasI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qU-Qd-HHp">
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYs-UG-5jP">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <items>
+                                    <navigationItem title="Where Was I" id="RYM-yU-zXv">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="dkZ-qW-mPO">
+                                            <connections>
+                                                <action selector="SaveButtonClicked:" destination="BYZ-38-t0r" id="hdW-xr-8N1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jYs-UG-5jP" firstAttribute="leading" secondItem="6qU-Qd-HHp" secondAttribute="leading" id="DVk-N0-4LU"/>
+                            <constraint firstItem="jYs-UG-5jP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F8o-Qx-fP7"/>
+                            <constraint firstItem="6qU-Qd-HHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M8f-lb-8H6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6qU-Qd-HHp" secondAttribute="trailing" id="PL6-M8-lwr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6qU-Qd-HHp" secondAttribute="bottom" id="drM-4M-OKc"/>
+                            <constraint firstItem="6qU-Qd-HHp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="hd4-pH-1JX"/>
+                            <constraint firstItem="jYs-UG-5jP" firstAttribute="trailing" secondItem="6qU-Qd-HHp" secondAttribute="trailing" id="pek-Fe-iTc"/>
+                            <constraint firstItem="6qU-Qd-HHp" firstAttribute="top" secondItem="jYs-UG-5jP" secondAttribute="bottom" id="vA5-KB-7zO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="6qU-Qd-HHp" id="6Bb-B1-GOQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
